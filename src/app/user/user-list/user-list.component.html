@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="search-hero">
+		<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a user by id or name">
+	</div>
+	{{searchText}}
+	<h2>Users Information</h2>
+	<p>The .table-hover class enables a hover state on table rows:</p>            
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Firstname</th>
+				<th>Email</th>
+				<th>Address Detail</th>
+				<th>Website</th>
+				<th>Company</th>
+				<th>Contact Number</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor= "let user of userList | filter:searchText">
+				<td>{{user.name}}</td>
+				<td>{{user.email}}</td>
+				<td>{{user.address.suite}} ,{{user.street}} {{user.city}} {{user.zipcode}}</td>
+				<td>{{user.website}}</td>
+				<td>{{user.company.name}}</td>
+				<td>
+					<button onclick="navigateToUserInfo(user.id)">Edit</button>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
