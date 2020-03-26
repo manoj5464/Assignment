@@ -1,3 +1,6 @@
 .container .card {
     margin: 20px;
 }
+.loading-text {
+    text-align: center;
+}

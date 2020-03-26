@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { UserService } from 'src/app/service/user.service';
 export class UserListComponent implements OnInit {
 
   userList:any;
-  constructor(private userService:UserService) {
+  constructor(private route:Router,private router:ActivatedRoute,private userService:UserService) {
 
   }
 
@@ -22,5 +23,8 @@ export class UserListComponent implements OnInit {
     });
   }
   
+  navigateToUserInfo(userId) {
+      this.route.navigate(['/user', userId]);;
+  }
 
 }

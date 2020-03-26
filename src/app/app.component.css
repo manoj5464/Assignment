@@ -271,7 +271,21 @@
       visibility: hidden;
     }
   }
-
-  .container table {
-    
+  .action-button {
+    text-align: center;
+    margin: 20px;
+  }
+  .button {
+    background-color:#292b3636;  
+    border-radius: 18px;
+    color: white;
+    padding: .3em;
+    margin: 5px;
+    text-decoration: none;
+  }
+  
+  .button:focus,
+  .button:hover {
+    background-color:#60ca54c9;
+    color: White;
   }

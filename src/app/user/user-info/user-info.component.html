@@ -1,8 +1,13 @@
 <div class="container">
 	<h2>User Information</h2>
 	<br>
+	<div *ngIf="userData.length == 0 " class="card">
+		<div class="card-header bg-primary text-white"></div>
+		<div class="card-body loading-text"><strong>loading....</strong></div>
+	</div>
 	<div *ngFor="let user of userData;" class="card">
 		<div class="card-header bg-primary text-white">{{user.title}}</div>
 		<div class="card-body">{{user.body}}</div>
 		<!-- <div class="card-footer">Footer</div> -->
+	</div>
 </div>
