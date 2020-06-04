@@ -26,8 +26,8 @@ const routes: Routes = [
     component:ChartComponent
   },
   {
-    path:'***',
-    component:UserListComponent
+    path:'**',
+    redirectTo:'userlist',
   }
 ];
 
